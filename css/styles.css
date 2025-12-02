@@ -33,6 +33,10 @@ html, body {
     border-radius: 5px;
 }
 
+.ctrl-butt:hover {
+    transform: rotateZ(360deg);
+    transition: all 0.4s;
+}
 
 /* CANVAS AREA */
 #canvas {
