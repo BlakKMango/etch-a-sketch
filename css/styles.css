@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "annieUYT";
+    src: url(../fonts/AnnieUseYourTelescope-Regular.woff2);
+}
+
 html, body {
     padding: 0;
     margin: 0;
     height: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "annieUYT", 'Courier New', Courier, monospace
 }
 
 /* NAVIGATION */
@@ -11,9 +16,7 @@ html, body {
     justify-content: center;
 }
 
-.ctrl-butt {
 
-}
 
 
 
