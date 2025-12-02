@@ -1,0 +1,31 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* NAVIGATION */
+.ctrl {
+    display: flex;
+    justify-content: center;
+}
+
+.ctrl-butt {
+
+}
+
+
+
+
+
+/* CANVAS AREA */
+#canvas {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 70%;
+    flex: none;
+    margin: 0 auto;
+    border: 4px solid black 
+}
