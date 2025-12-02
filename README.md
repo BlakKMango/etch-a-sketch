@@ -26,15 +26,6 @@ PROJECT FLOW:
 5. User can click the refresh button to trigger a new pop-up for number of boxes and clear the page. Or click a separate button that only clears the page without re-asking.
 
 
-1. Declare a function that adds a number of squares to the canvas.
-
-    function addSquaresToCanvas(num)
-        numberOfSquares = num * num
-        loop for num times {
-            canvas.createElement(div)
-            add class to each element "pixel"
-        }
-
-Variables need to be declared outside (canvas, pixel)
+1. function to prompt user for their number.
 
 
