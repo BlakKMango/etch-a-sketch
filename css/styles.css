@@ -58,3 +58,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+
+/* COLOUR PICKER */
+#color-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    gap: 16px;
+}

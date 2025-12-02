@@ -2,10 +2,6 @@ const canvas = document.querySelector("#canvas");
 const newCanvasButt = document.querySelector("#new")
 const refreshCanvasButt = document.querySelector("#clear")
 
-function createNewCanvas(){
-    //just refresh the page
-    window.location.reload();
-}
 
 function createCanvas(){
     let userNum = getUserNum()
@@ -38,6 +34,11 @@ function getUserNum(){
         }
     }
     return userNum;
+}
+
+function createNewCanvas(){
+    //just refresh the page
+    window.location.reload();
 }
 
 
