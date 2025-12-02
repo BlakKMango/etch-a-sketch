@@ -26,9 +26,15 @@ PROJECT FLOW:
 5. User can click the refresh button to trigger a new pop-up for number of boxes and clear the page. Or click a separate button that only clears the page without re-asking.
 
 
-<!-- TASK ONE - PAGE DESIGN AND LAYOUT -->
-1. Update the index page to include a set-sized box (to contain the sketchpad).
-    - Grid needs to be a flexbox, however, it needs to stay the same size and the child items need to resize.
-    - Grid needs to appear in the same location each time.
-2. Two buttons - One says "New Grid" one says "Clear".
+1. Declare a function that adds a number of squares to the canvas.
+
+    function addSquaresToCanvas(num)
+        numberOfSquares = num * num
+        loop for num times {
+            canvas.createElement(div)
+            add class to each element "pixel"
+        }
+
+Variables need to be declared outside (canvas, pixel)
+
 
