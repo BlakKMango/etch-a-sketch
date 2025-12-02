@@ -26,6 +26,6 @@ PROJECT FLOW:
 5. User can click the refresh button to trigger a new pop-up for number of boxes and clear the page. Or click a separate button that only clears the page without re-asking.
 
 
-1. function to prompt user for their number.
+1. 
 
 
