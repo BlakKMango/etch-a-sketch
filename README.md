@@ -27,7 +27,7 @@ PROJECT FLOW:
 
 Need to make the boxes fill with colour by using click and drag.
 
-1. function to change the colour of the box.
-2. Start by doing this on click to test.
+1. Want the change colour function to run IF isMouseDown is true. 
+2. Want the change colour function to stop IF it is not true
 
 

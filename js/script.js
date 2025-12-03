@@ -4,7 +4,8 @@ const refreshCanvasButt = document.querySelector("#clear")
 const colorPicker = document.querySelector("#color-picker")
 const pixelArray = document.querySelectorAll(".rendered")
 
-let selectedColor = colorPicker.value
+let selectedColor = colorPicker.value;
+let isMouseDown = false;
 
 function createCanvas(){
     let userNum = getUserNum()
@@ -21,7 +22,7 @@ function addSquaresToCanvas(userNum){
         pixel.classList.add("rendered");
         pixel.style.minWidth = squareSizeString
         pixel.style.minHeight = squareSizeString
-        pixel.addEventListener("click", setPixelColor)
+        pixel.addEventListener("click", fill)
         canvas.appendChild(pixel);
     }
 }
@@ -45,9 +46,16 @@ function createNewCanvas(){
     window.location.reload();
 }
 
-function setPixelColor(event){
+function draw(event){
+    if (isMouseDown){
+    event.target.style.backgroundColor = selectedColor;
+    } 
+}
+
+function fill(event){
     event.target.style.backgroundColor = selectedColor;
 }
+
 
 document.addEventListener("DOMContentLoaded", createCanvas)
 newCanvasButt.addEventListener("click", createNewCanvas)
@@ -55,3 +63,7 @@ newCanvasButt.addEventListener("click", createNewCanvas)
 colorPicker.addEventListener("change", () => {
     selectedColor = colorPicker.value
     })
+
+document.addEventListener("mousedown", () => isMouseDown = true)
+document.addEventListener("mouseup", () => isMouseDown = false)
+canvas.addEventListener("mouseover", draw)
