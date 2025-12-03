@@ -1,7 +1,8 @@
 const canvas = document.querySelector("#canvas");
 const newCanvasButt = document.querySelector("#new")
 const refreshCanvasButt = document.querySelector("#clear")
-
+const colorPicker = document.querySelector("#color-picker")
+let selectedColor = colorPicker.value
 
 function createCanvas(){
     let userNum = getUserNum()
@@ -45,3 +46,6 @@ function createNewCanvas(){
 document.addEventListener("DOMContentLoaded", createCanvas)
 newCanvasButt.addEventListener("click", createNewCanvas)
 // refreshCanvasButt.addEventListener("click", )
+colorPicker.addEventListener("change", () => {
+    selectedColor = colorPicker.value
+    })
