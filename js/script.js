@@ -22,7 +22,7 @@ function addSquaresToCanvas(userNum){
         pixel.style.minWidth = squareSizeString
         pixel.style.minHeight = squareSizeString
         pixel.setAttribute("draggable", "false");
-        pixel.addEventListener("click", fill)
+        pixel.addEventListener("mousedown", fill)
         canvas.appendChild(pixel);
     }
 }
