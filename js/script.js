@@ -47,8 +47,9 @@ function createNewCanvas(){
 }
 
 function draw(event){
+    
     if (isMouseDown){
-    event.target.style.backgroundColor = selectedColor;
+        event.target.style.backgroundColor = selectedColor;
     } 
 }
 
@@ -64,8 +65,16 @@ function refreshCanvas(){
 }
 
 document.addEventListener("DOMContentLoaded", createCanvas)
-document.addEventListener("mousedown", () => isMouseDown = true)
+
+canvas.addEventListener("mousedown", () => isMouseDown = true)
 document.addEventListener("mouseup", () => isMouseDown = false)
+canvas.addEventListener("mouseover", (e) => {
+    if (!isMouseDown) return;
+    if (!e.target.classList.contains("rendered")) return;
+    e.target.style.backgroundColor = selectedColor;
+});
+canvas.addEventListener("mouseleave", () => isMouseDown = false)
+
 newCanvasButt.addEventListener("click", createNewCanvas)
 refreshCanvasButt.addEventListener("click", refreshCanvas)
 
@@ -73,4 +82,4 @@ colorPicker.addEventListener("change", () => {
     selectedColor = colorPicker.value
     })
 
-canvas.addEventListener("mouseover", draw)
+
