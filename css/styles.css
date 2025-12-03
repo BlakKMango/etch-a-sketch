@@ -35,7 +35,7 @@ html, body {
 }
 
 .ctrl-butt:hover {
-    transform: rotateZ(360deg);
+    transform: scale(0.9);
     transition: all 0.4s;
 }
 
