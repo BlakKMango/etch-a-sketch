@@ -25,7 +25,9 @@ PROJECT FLOW:
 4. User is able to select a colour and colour in the boxes.
 5. User can click the refresh button to trigger a new pop-up for number of boxes and clear the page. Or click a separate button that only clears the page without re-asking.
 
+Need to make the boxes fill with colour by using click and drag.
 
-1. 
+1. function to change the colour of the box.
+2. Start by doing this on click to test.
 
 

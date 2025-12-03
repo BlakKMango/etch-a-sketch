@@ -2,6 +2,8 @@ const canvas = document.querySelector("#canvas");
 const newCanvasButt = document.querySelector("#new")
 const refreshCanvasButt = document.querySelector("#clear")
 const colorPicker = document.querySelector("#color-picker")
+const pixelArray = document.querySelectorAll(".rendered")
+
 let selectedColor = colorPicker.value
 
 function createCanvas(){
@@ -19,6 +21,7 @@ function addSquaresToCanvas(userNum){
         pixel.classList.add("rendered");
         pixel.style.minWidth = squareSizeString
         pixel.style.minHeight = squareSizeString
+        pixel.addEventListener("click", setPixelColor)
         canvas.appendChild(pixel);
     }
 }
@@ -42,6 +45,9 @@ function createNewCanvas(){
     window.location.reload();
 }
 
+function setPixelColor(event){
+    event.target.style.backgroundColor = selectedColor;
+}
 
 document.addEventListener("DOMContentLoaded", createCanvas)
 newCanvasButt.addEventListener("click", createNewCanvas)
