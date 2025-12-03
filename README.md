@@ -13,6 +13,3 @@ My additional goals:
 - Allow the user to select colours and apply those to the boxes
 - Sensible and clear naming of classes and IDs
 
-
-TESTing
-
