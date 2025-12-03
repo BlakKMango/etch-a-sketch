@@ -1,8 +1,7 @@
 const canvas = document.querySelector("#canvas");
 const newCanvasButt = document.querySelector("#new")
-const refreshCanvasButt = document.querySelector("#clear")
+const refreshCanvasButt = document.querySelector("#refresh")
 const colorPicker = document.querySelector("#color-picker")
-const pixelArray = document.querySelectorAll(".rendered")
 
 let selectedColor = colorPicker.value;
 let isMouseDown = false;
@@ -22,6 +21,7 @@ function addSquaresToCanvas(userNum){
         pixel.classList.add("rendered");
         pixel.style.minWidth = squareSizeString
         pixel.style.minHeight = squareSizeString
+        pixel.setAttribute("draggable", "false");
         pixel.addEventListener("click", fill)
         canvas.appendChild(pixel);
     }
@@ -56,14 +56,21 @@ function fill(event){
     event.target.style.backgroundColor = selectedColor;
 }
 
+function refreshCanvas(){
+    let pixelArray = document.querySelectorAll(".rendered")
+    pixelArray.forEach(pixel => {
+        pixel.style.backgroundColor = "#ffffff"
+    })
+}
 
 document.addEventListener("DOMContentLoaded", createCanvas)
+document.addEventListener("mousedown", () => isMouseDown = true)
+document.addEventListener("mouseup", () => isMouseDown = false)
 newCanvasButt.addEventListener("click", createNewCanvas)
-// refreshCanvasButt.addEventListener("click", )
+refreshCanvasButt.addEventListener("click", refreshCanvas)
+
 colorPicker.addEventListener("change", () => {
     selectedColor = colorPicker.value
     })
 
-document.addEventListener("mousedown", () => isMouseDown = true)
-document.addEventListener("mouseup", () => isMouseDown = false)
 canvas.addEventListener("mouseover", draw)
