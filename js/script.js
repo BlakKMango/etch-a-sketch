@@ -28,7 +28,7 @@ function addSquaresToCanvas(userNum){
 }
 
 function getUserNum(){
-    let userNum = prompt("How detailed do you want your drawing?\nEnter the number of squares you want on each side of the canvas (max: 100)");
+    let userNum = prompt("How detailed do you want your drawing?\nEnter Max: 100 squares.");
     while (userNum > 100 || userNum < 1 || isNaN(userNum)){
         if(userNum > 100 || userNum === 0){
             userNum = prompt("The number must be between 1 and 100")
